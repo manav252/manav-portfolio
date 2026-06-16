@@ -294,6 +294,10 @@ export const RESEARCH = [
         href: "/research/waste-segregation-paper.pdf",
       },
       {
+        label: "Magnet Separation Demo",
+        href: "/research/waste-magnet-separation-robot-demo.mp4",
+      },
+      {
         label: "Sanitary Detection Demo",
         href: "/research/waste-sanitary-detection-ml-demo.mp4",
       },
