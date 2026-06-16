@@ -1,0 +1,10 @@
+<svg role="img" viewBox="0 0 128 128" xmlns="http://www.w3.org/2000/svg">
+  <title>Matplotlib</title>
+  <rect x="18" y="18" width="92" height="92" rx="18" fill="#11557C"/>
+  <path d="M34 92h68" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M34 92V28" stroke="#FFFFFF" stroke-width="8" stroke-linecap="round"/>
+  <path d="M38 78c12-22 20-18 29-32 9-13 17 23 29-2" fill="none" stroke="#FBC02D" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="38" cy="78" r="6" fill="#4FC3F7"/>
+  <circle cx="67" cy="46" r="6" fill="#4FC3F7"/>
+  <circle cx="96" cy="44" r="6" fill="#4FC3F7"/>
+</svg>
