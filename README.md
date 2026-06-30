@@ -59,6 +59,8 @@ This portfolio highlights my work as an aspiring Data Analyst / Data Scientist /
 
 ## Getting Started
 
+This project uses npm. Use `package-lock.json` as the source of truth for dependency installs.
+
 Install dependencies:
 
 ```bash
