@@ -1,7 +1,7 @@
 ## Contributing
 
-[fork]: https://github.com/sanidhyy/3d-portfolio/fork
-[pr]: https://github.com/sanidhyy/3d-portfolio/compare
+[fork]: https://github.com/manav252/manav-portfolio/fork
+[pr]: https://github.com/manav252/manav-portfolio/compare
 [style]: https://standardjs.com/
 [code-of-conduct]: CODE_OF_CONDUCT.md
 
@@ -18,8 +18,8 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 ## Submitting a pull request
 
 1. [Fork][fork] and clone the repository.
-1. Configure and install the dependencies: `npm install`.
-1. Make sure the tests pass on your machine: `npm test`, note: these tests also apply the linter, so there's no need to lint separately.
+1. Configure and install the dependencies: `npm install --legacy-peer-deps`.
+1. Make sure the checks pass on your machine: `npm run check-types` and `npm run build`.
 1. Create a new branch: `git checkout -b my-branch-name`.
 1. Make your change, add tests, and make sure the tests still pass.
 1. Push to your fork and [submit a pull request][pr].
@@ -27,7 +27,7 @@ We'd also love PRs. If you're thinking of a large PR, we advise opening up an is
 
 Here are a few things you can do that will increase the likelihood of your pull request being accepted:
 
-- Follow the [style guide][style] which is using standard. Any linting errors should be shown when running `npm test`.
+- Keep changes focused and verify the production build before opening a pull request.
 - Write and update tests.
 - Keep your changes as focused as possible. If there are multiple changes you would like to make that are not dependent upon each other, consider submitting them as separate pull requests.
 - Write a [good commit message](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).

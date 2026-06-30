@@ -1,45 +1,34 @@
 {
-  "name": "3d-portfolio",
+  "name": "manav-portfolio",
   "version": "1.1.4",
   "private": true,
   "author": {
-    "name": "Sanidhya Kumar Verma",
-    "email": "sanidhya.verma12345@gmail.com",
-    "url": "https://github.com/sanidhyy"
+    "name": "Manav Doshi",
+    "url": "https://github.com/manav252"
   },
-  "description": "Modern 3D Portfolio using React, Three.js and Typescript",
+  "description": "Personal data analytics, machine learning, and AI portfolio for Manav Doshi.",
   "keywords": [
-    "reactjs",
+    "portfolio",
+    "data-analytics",
+    "data-science",
+    "machine-learning",
+    "business-intelligence",
+    "ai",
     "react",
-    "porfolio-app",
+    "typescript",
+    "vite",
     "three-js",
-    "modern-ui/ux",
-    "js",
-    "javascript",
-    "html",
-    "css",
     "tailwindcss"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/sanidhyy/3d-portfolio.git"
+    "url": "https://github.com/manav252/manav-portfolio.git"
   },
-  "homepage": "https://github.com/sanidhyy/3d-portfolio#readme",
+  "homepage": "https://manav-portfolio-woad.vercel.app",
   "bugs": {
-    "url": "https://github.com/sanidhyy/3d-portfolio/issues",
-    "email": "sanidhya.verma12345@gmail.com"
+    "url": "https://github.com/manav252/manav-portfolio/issues"
   },
-  "funding": [
-    {
-      "type": "patreon",
-      "url": "https://www.patreon.com/sanidhy"
-    },
-    {
-      "type": "Buy me a coffee",
-      "url": "https://www.buymeacoffee.com/sanidhy"
-    }
-  ],
   "type": "module",
   "scripts": {
     "dev": "vite",
