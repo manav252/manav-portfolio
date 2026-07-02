@@ -1,5 +1,11 @@
 # Manav Doshi | Data Analyst Portfolio
 
+![TypeScript](https://img.shields.io/badge/TypeScript-Portfolio-3178C6)
+![React](https://img.shields.io/badge/React-UI-61DAFB)
+![Vite](https://img.shields.io/badge/Vite-Build-646CFF)
+![Tailwind](https://img.shields.io/badge/Tailwind-CSS-38B2AC)
+![License](https://img.shields.io/badge/License-MIT-green)
+
 Personal portfolio website for Manav Doshi, focused on data analytics, machine learning, business intelligence, and applied research projects.
 
 Live site: https://manav-portfolio-woad.vercel.app
@@ -118,3 +124,9 @@ Every push to the `main` branch triggers a new production deployment.
 ## Repository
 
 GitHub: https://github.com/manav252/manav-portfolio
+
+## Documentation
+
+- `docs/architecture.md`
+- `docs/methodology.md`
+- `docs/findings.md`
