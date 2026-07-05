@@ -11,6 +11,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 type ProjectCardProps = (typeof PROJECTS)[number] & {
   index: number;
   live_site_link?: string;
+  demo_video_link?: string;
 };
 
 // Project Card
@@ -22,6 +23,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_site_link,
+  demo_video_link,
 }: ProjectCardProps) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
     <Tilt
@@ -30,7 +32,7 @@ const ProjectCard = ({
         scale: 1,
         speed: 450,
       }}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full"
+      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-[620px] flex flex-col"
     >
       <div className="relative w-full h-[230px]">
         {/* Work image */}
@@ -82,7 +84,9 @@ const ProjectCard = ({
       {/* Work Info */}
       <div className="mt-5">
         <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px]">{description}</p>
+        <p className="mt-2 min-h-[144px] text-secondary text-[14px] leading-[24px]">
+          {description}
+        </p>
       </div>
 
       {/* Work Tag */}
@@ -93,6 +97,17 @@ const ProjectCard = ({
           </p>
         ))}
       </div>
+
+      {demo_video_link && (
+        <button
+          type="button"
+          onClick={() => window.open(demo_video_link, "_blank", "noreferrer")}
+          className="mt-auto w-fit rounded-lg border border-[#f8d47a]/40 bg-gradient-to-r from-[#f8d47a]/20 via-[#915eff]/20 to-[#56ccf2]/10 px-4 py-2 text-[13px] font-semibold text-[#f8d47a] transition hover:border-[#f8d47a]/80 hover:bg-[#f8d47a]/20"
+          aria-label={`Open ${name} demo video`}
+        >
+          Demo Video
+        </button>
+      )}
     </Tilt>
   </motion.div>
 );

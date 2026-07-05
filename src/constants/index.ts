@@ -24,6 +24,7 @@ import {
   project2,
   customerBehaviorAnalysis,
   healthcareDataAnalysis,
+  safeVisionAi,
   youtubeTrendAnalyzer,
   iotSmartHelmetHardware,
   wasteSegregationSystem,
@@ -168,6 +169,28 @@ export const EXPERIENCES = [
 
 // ================= PROJECTS =================
 export const PROJECTS = [
+  {
+    name: "SafeVision AI",
+    description:
+      "AI-powered industrial safety intelligence platform combining CCTV analytics, gas sensors, permits, maintenance status, and explainable AI to detect workplace risks before incidents occur.",
+    tags: [
+      {
+        name: "computer-vision",
+        color: "blue-text-gradient",
+      },
+      {
+        name: "fastapi",
+        color: "green-text-gradient",
+      },
+      {
+        name: "ai",
+        color: "text-transparent bg-clip-text bg-gradient-to-r from-[#f8d47a] via-[#d9a441] to-[#fff0a6]",
+      },
+    ],
+    image: safeVisionAi,
+    source_code_link: "https://github.com/manav252",
+    demo_video_link: "/demos/safevision-ai-demo.mp4",
+  },
   {
     name: "Customer Behavior Analysis",
     description:

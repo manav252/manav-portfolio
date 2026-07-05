@@ -50,6 +50,7 @@ import project5 from "./projects/project5.png";
 import project6 from "./projects/project6.png";
 import customerBehaviorAnalysis from "./projects/customer-behavior-analysis.png";
 import healthcareDataAnalysis from "./projects/healthcare-data-analysis.png";
+import safeVisionAi from "./projects/safevision-ai.png";
 import youtubeTrendAnalyzer from "./projects/youtube-trend-analyzer.png";
 import iotSmartHelmetHardware from "./projects/iot-smart-helmet-hardware.jpg";
 import wasteSegregationSystem from "./projects/waste-segregation-system.png";
@@ -110,6 +111,7 @@ export {
   project6,
   customerBehaviorAnalysis,
   healthcareDataAnalysis,
+  safeVisionAi,
   youtubeTrendAnalyzer,
   iotSmartHelmetHardware,
   wasteSegregationSystem,
