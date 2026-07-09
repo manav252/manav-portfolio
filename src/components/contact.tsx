@@ -166,10 +166,6 @@ export const Contact = () => {
           {/* Title */}
           <p className={styles.sectionSubText}>Get in touch</p>
           <h3 className={styles.sectionHeadText}>Contact.</h3>
-          <p className="mt-4 max-w-[520px] text-[15px] leading-[26px] text-secondary">
-            Delivery: direct email to {contactEmail} when EmailJS is configured in
-            Vercel; otherwise the form opens a prefilled email draft for the sender.
-          </p>
 
           {submitted ? (
             <div className="mt-12 overflow-hidden rounded-2xl border border-[#915eff]/30 bg-tertiary/80 p-6 shadow-[0_20px_60px_rgba(145,94,255,0.18)]">
