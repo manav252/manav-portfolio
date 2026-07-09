@@ -233,7 +233,7 @@ export const PROJECTS = [
     ],
     image: healthcareDataAnalysis,
     source_code_link: "https://github.com/manav252?tab=repositories",
-    live_site_link: "/demos/healthcare-data-analysis.html",
+    live_site_link: "https://healthcare-diabetes-analysis-manav252.streamlit.app",
   },
   {
     name: "YouTube Trend Analyzer",
@@ -255,7 +255,7 @@ export const PROJECTS = [
     ],
     image: youtubeTrendAnalyzer,
     source_code_link: "https://github.com/manav252?tab=repositories",
-    live_site_link: "/demos/youtube-trend-analyzer.html",
+    live_site_link: "https://youtube-trend-analyzer-manav252.streamlit.app",
   },
 ] as const;
 
