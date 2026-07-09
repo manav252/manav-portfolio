@@ -258,8 +258,8 @@ export const PROJECTS = [
     ],
     image: youtubeTrendAnalyzer,
     source_code_link: "https://github.com/manav252/YouTube-Trend-Analyzer",
-    live_site_link: "/demos/youtube-trend-analyzer.html",
-    live_site_label: "Project Demo",
+    live_site_link: "https://youtube-trend-analyzer-fm7vqnnr36rsghr2uyq8kf.streamlit.app",
+    live_site_label: "Streamlit App",
   },
 ] as const;
 
