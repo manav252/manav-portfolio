@@ -23,7 +23,22 @@ export const Contact = () => {
   );
 
   const contactEmail =
-    import.meta.env.VITE_APP_EMAILJS_RECIEVER || "doshimanav24@gmail.com";
+    import.meta.env.VITE_APP_EMAILJS_RECEIVER ||
+    import.meta.env.VITE_APP_EMAILJS_RECIEVER ||
+    "doshimanav24@gmail.com";
+
+  const openEmailDraft = () => {
+    const fromEmail = form.email.trim().toLowerCase();
+    const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
+    const body = encodeURIComponent(
+      `Name: ${form.name}\nEmail: ${fromEmail}\n\n${form.message}`,
+    );
+
+    window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    setDeliveryMode("mailto");
+    setSubmitted(true);
+    toast.info("Opening your email app to send this message.");
+  };
 
   // handle form change
   const handleChange = (
@@ -110,14 +125,7 @@ export const Contact = () => {
     }
 
     if (!serviceId || !templateId || !publicKey) {
-      const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
-      const body = encodeURIComponent(
-        `Name: ${form.name}\nEmail: ${fromEmail}\n\n${form.message}`,
-      );
-      window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
-      setDeliveryMode("mailto");
-      setSubmitted(true);
-      toast.info("Opening your email app to send this message.");
+      openEmailDraft();
       setLoading(false);
       return true;
     }
@@ -149,7 +157,7 @@ export const Contact = () => {
       .catch((error) => {
         // Error handle
         console.log("[CONTACT_ERROR]: ", error);
-        toast.error("Something went wrong. Please email me directly.");
+        openEmailDraft();
       })
       .finally(() => {
         setLoading(false);
