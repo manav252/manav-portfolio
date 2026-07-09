@@ -34,9 +34,9 @@ const ProjectCard = ({
         scale: 1,
         speed: 450,
       }}
-      className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full min-h-[620px] flex flex-col"
+      className="bg-tertiary p-4 rounded-2xl w-full min-h-[auto] flex flex-col sm:w-[360px] sm:min-h-[620px] sm:p-5"
     >
-      <div className="relative w-full h-[230px]">
+      <div className="relative h-[200px] w-full sm:h-[230px]">
         {/* Work image */}
         <img
           src={image}
@@ -87,8 +87,8 @@ const ProjectCard = ({
 
       {/* Work Info */}
       <div className="mt-5 flex-1">
-        <h3 className="text-white font-bold text-[24px] leading-[32px]">{name}</h3>
-        <p className="mt-2 text-secondary text-[14px] leading-[24px]">
+        <h3 className="text-white font-bold text-[22px] leading-[30px] sm:text-[24px] sm:leading-[32px]">{name}</h3>
+        <p className="mt-2 text-secondary text-[14px] leading-[23px] sm:leading-[24px]">
           {description}
         </p>
       </div>
@@ -102,12 +102,12 @@ const ProjectCard = ({
         ))}
       </div>
 
-      <div className="mt-auto flex flex-wrap gap-3 pt-6">
+      <div className="mt-auto flex flex-wrap gap-3 pt-6 max-[420px]:flex-col">
         {live_site_link && (
           <button
             type="button"
             onClick={() => window.open(live_site_link, "_blank", "noreferrer")}
-            className="w-fit rounded-lg border border-[#915eff]/60 bg-[#915eff]/20 px-4 py-2 text-[13px] font-semibold text-white transition hover:border-[#915eff] hover:bg-[#915eff]/35"
+            className="w-fit rounded-lg border border-[#915eff]/60 bg-[#915eff]/20 px-4 py-2 text-[13px] font-semibold text-white transition hover:border-[#915eff] hover:bg-[#915eff]/35 max-[420px]:w-full"
             aria-label={`Open ${name} ${live_site_label}`}
           >
             {live_site_label}
@@ -118,7 +118,7 @@ const ProjectCard = ({
           <button
             type="button"
             onClick={() => window.open(demo_video_link, "_blank", "noreferrer")}
-            className="w-fit rounded-lg border border-[#f8d47a]/40 bg-gradient-to-r from-[#f8d47a]/20 via-[#915eff]/20 to-[#56ccf2]/10 px-4 py-2 text-[13px] font-semibold text-[#f8d47a] transition hover:border-[#f8d47a]/80 hover:bg-[#f8d47a]/20"
+            className="w-fit rounded-lg border border-[#f8d47a]/40 bg-gradient-to-r from-[#f8d47a]/20 via-[#915eff]/20 to-[#56ccf2]/10 px-4 py-2 text-[13px] font-semibold text-[#f8d47a] transition hover:border-[#f8d47a]/80 hover:bg-[#f8d47a]/20 max-[420px]:w-full"
             aria-label={`Open ${name} demo video`}
           >
             Demo Video
@@ -155,7 +155,7 @@ export const Works = () => {
         </div>
 
         {/* Project Card */}
-        <div className="mt-20 flex flex-wrap gap-7">
+        <div className="mt-12 flex flex-wrap gap-6 sm:mt-20 sm:gap-7">
           {PROJECTS.map((project, i) => (
             <ProjectCard key={`project-${i}`} index={i} {...project} />
           ))}

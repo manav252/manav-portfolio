@@ -188,7 +188,7 @@ export const PROJECTS = [
       },
     ],
     image: safeVisionAi,
-    source_code_link: "https://github.com/manav252?tab=repositories",
+    source_code_link: "https://github.com/manav252/SafeVision-AI",
     demo_video_link: "/demos/safevision-ai-demo.mp4",
   },
   {

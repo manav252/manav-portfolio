@@ -31,6 +31,18 @@ VITE_APP_EMAILJS_KEY=your_emailjs_public_key
 VITE_APP_EMAILJS_RECIEVER=your_email_address
 ```
 
+EmailJS Template Fields:
+
+```text
+from_name
+from_email
+to_name
+to_email
+message
+```
+
+Set `VITE_APP_EMAILJS_RECIEVER` to `doshimanav24@gmail.com` in Vercel.
+
 If only `VITE_APP_EMAILJS_RECIEVER` is set, the site still deploys and the
 contact form opens a prefilled email draft. Add all EmailJS variables when you
 want direct in-site email sending.

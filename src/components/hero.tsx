@@ -3,6 +3,46 @@ import { SOCIALS } from "../constants";
 import { styles } from "../styles";
 import { cn } from "../utils/lib";
 
+
+const DataOrbit = () => (
+  <div className="relative mt-8 h-[170px] w-full max-w-[340px] sm:h-[210px] xl:hidden">
+    <motion.div
+      animate={{ rotate: 360 }}
+      transition={{ duration: 18, repeat: Infinity, ease: "linear" }}
+      className="absolute left-1/2 top-1/2 h-[140px] w-[140px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[#915eff]/35 sm:h-[170px] sm:w-[170px]"
+    />
+    <motion.div
+      animate={{ rotate: -360 }}
+      transition={{ duration: 24, repeat: Infinity, ease: "linear" }}
+      className="absolute left-1/2 top-1/2 h-[96px] w-[220px] -translate-x-1/2 -translate-y-1/2 rounded-[999px] border border-[#00cea8]/30"
+      style={{ transform: "translate(-50%, -50%) rotateX(64deg)" }}
+    />
+    <div className="absolute left-1/2 top-1/2 grid h-[86px] w-[86px] -translate-x-1/2 -translate-y-1/2 place-items-center rounded-2xl border border-white/10 bg-[#151030]/90 shadow-[0_0_45px_rgba(145,94,255,0.28)]">
+      <span className="text-[12px] font-black uppercase tracking-[0.22em] text-[#f8d47a]">AI</span>
+      <span className="text-[11px] font-semibold text-white">Data Core</span>
+    </div>
+    {[
+      ["SQL", "left-[10%] top-[22%]", "bg-[#56ccf2]"],
+      ["ML", "right-[12%] top-[18%]", "bg-[#915eff]"],
+      ["BI", "bottom-[16%] left-[16%]", "bg-[#00cea8]"],
+      ["ETL", "bottom-[12%] right-[14%]", "bg-[#f8d47a]"],
+    ].map(([label, position, color], index) => (
+      <motion.div
+        key={label}
+        animate={{ y: [0, index % 2 === 0 ? -8 : 8, 0] }}
+        transition={{ duration: 2.8 + index * 0.35, repeat: Infinity, ease: "easeInOut" }}
+        className={cn(
+          "absolute rounded-xl border border-white/10 bg-black-100/80 px-3 py-2 text-[12px] font-bold text-white shadow-lg",
+          position
+        )}
+      >
+        <span className={cn("mr-2 inline-block h-2 w-2 rounded-full", color)} />
+        {label}
+      </motion.div>
+    ))}
+  </div>
+);
+
 const DataHeroVisual = () => (
   <div
     data-testid="data-hero-visual"
@@ -89,38 +129,38 @@ const DataHeroVisual = () => (
 export const Hero = () => {
   return (
     <section
-      className="relative w-full h-screen mx-auto overflow-hidden bg-primary"
+      className="relative w-full min-h-screen mx-auto overflow-hidden bg-primary"
       style={{ backgroundColor: "#050816" }}
     >
       {/* TEXT CONTENT */}
       <div
         className={cn(
           styles.paddingX,
-          "absolute inset-0 top-[120px] max-w-7xl mx-auto flex flex-row items-start gap-5 z-10"
+          "relative top-[110px] max-w-7xl mx-auto flex flex-row items-start gap-4 z-10 pb-36 sm:gap-5 lg:absolute lg:inset-0 lg:top-[120px] lg:pb-0"
         )}
       >
         {/* Left line */}
-        <div className="flex flex-col justify-center items-center mt-5">
+        <div className="flex flex-col justify-center items-center mt-4 sm:mt-5">
           <div className="w-5 h-5 rounded-full bg-[#915eff]" />
-          <div className="w-1 sm:h-80 h-40 violet-gradient" />
+          <div className="w-1 h-56 violet-gradient sm:h-80" />
         </div>
 
         {/* Text */}
         <div className="max-w-[720px] xl:max-w-[760px] 2xl:max-w-none">
-          <h1 className={cn(styles.heroHeadText, "text-white")}>
+          <h1 className={cn(styles.heroHeadText, "max-w-[12ch] text-white sm:max-w-none")}>
             Hi, I'm <span className="text-[#915eff]">Manav Doshi</span>
           </h1>
 
-          <p className={cn(styles.heroSubText, "mt-2 max-w-[720px] text-white-100 xl:max-w-[760px] 2xl:max-w-[920px]")}>
+          <p className={cn(styles.heroSubText, "mt-3 max-w-[720px] text-white-100 xl:max-w-[760px] 2xl:max-w-[920px]")}>
             Building data-driven solutions using{" "}
             <br className="hidden 2xl:block" />
             SQL, Python, Machine Learning, and Business Intelligence.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-4">
+          <div className="mt-8 flex max-w-[520px] flex-wrap items-center gap-3 sm:gap-4">
             <a
               href="#projects"
-              className="rounded-lg bg-[#915eff] px-6 py-3 text-white font-semibold hover:bg-[#7a4de8] transition"
+              className="min-w-[148px] rounded-lg bg-[#915eff] px-5 py-3 text-center text-white font-semibold transition hover:bg-[#7a4de8] sm:px-6"
             >
               View Projects
             </a>
@@ -128,7 +168,7 @@ export const Hero = () => {
             <a
               href="/Manav_T_Doshi_Resume.pdf"
               download="Manav_T_Doshi_Resume.pdf"
-              className="rounded-lg border border-[#915eff] px-6 py-3 text-white font-semibold hover:bg-[#915eff]/20 transition"
+              className="min-w-[168px] rounded-lg border border-[#915eff] px-5 py-3 text-center text-white font-semibold transition hover:bg-[#915eff]/20 sm:px-6"
             >
               Download Resume
             </a>
@@ -154,13 +194,15 @@ export const Hero = () => {
               ))}
             </div>
           </div>
+
+          <DataOrbit />
         </div>
       </div>
 
       <DataHeroVisual />
 
       {/* Scroll indicator */}
-      <div className="absolute xs:bottom-10 bottom-32 w-full flex justify-center items-center z-10">
+      <div className="absolute bottom-8 hidden w-full justify-center items-center z-10 sm:flex xs:bottom-10">
         <a href="#about">
           <div className="w-[35px] h-[64px] rounded-3xl border-4 border-secondary flex justify-center items-start p-2">
             <motion.div
