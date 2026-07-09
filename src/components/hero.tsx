@@ -126,8 +126,8 @@ export const Hero = () => {
             </a>
 
             <a
-              href="/Manav_Doshi_Resume copy.pdf"
-              download="Manav_Doshi_Resume copy.pdf"
+              href="/Manav_T_Doshi_Resume.pdf"
+              download="Manav_T_Doshi_Resume.pdf"
               className="rounded-lg border border-[#915eff] px-6 py-3 text-white font-semibold hover:bg-[#915eff]/20 transition"
             >
               Download Resume

@@ -31,8 +31,9 @@ VITE_APP_EMAILJS_KEY=your_emailjs_public_key
 VITE_APP_EMAILJS_RECIEVER=your_email_address
 ```
 
-If these are not set, the site can still deploy, but the contact form submission
-will fail at runtime.
+If only `VITE_APP_EMAILJS_RECIEVER` is set, the site still deploys and the
+contact form opens a prefilled email draft. Add all EmailJS variables when you
+want direct in-site email sending.
 
 ## Git Setup And Push
 
@@ -71,7 +72,7 @@ git push -u origin main
 
 ## Notes
 
-- The resume PDF is served from `public/Manav_Doshi_Resume copy.pdf`.
+- The resume PDF is served from `public/Manav_T_Doshi_Resume.pdf`.
 - Research PDFs, images, and videos are served from `public/research`.
 - The magnet separation demo video was not present locally, so its broken
   production link was removed. Add the video to `public/research` and restore

@@ -48,12 +48,12 @@ import project3 from "./projects/project3.png";
 import project4 from "./projects/project4.png";
 import project5 from "./projects/project5.png";
 import project6 from "./projects/project6.png";
-import customerBehaviorAnalysis from "./projects/customer-behavior-analysis.png";
-import healthcareDataAnalysis from "./projects/healthcare-data-analysis.png";
-import safeVisionAi from "./projects/safevision-ai.png";
-import youtubeTrendAnalyzer from "./projects/youtube-trend-analyzer.png";
+import customerBehaviorAnalysis from "./projects/customer-behavior-analysis.jpg";
+import healthcareDataAnalysis from "./projects/healthcare-data-analysis.jpg";
+import safeVisionAi from "./projects/safevision-ai.jpg";
+import youtubeTrendAnalyzer from "./projects/youtube-trend-analyzer.jpg";
 import iotSmartHelmetHardware from "./projects/iot-smart-helmet-hardware.jpg";
-import wasteSegregationSystem from "./projects/waste-segregation-system.png";
+import wasteSegregationSystem from "./projects/waste-segregation-system.jpg";
 
 import user1 from "./testimonials/user1.jpg";
 import user2 from "./testimonials/user2.jpg";

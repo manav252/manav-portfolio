@@ -1,18 +1,22 @@
+import { lazy, Suspense } from "react";
 import { BrowserRouter } from "react-router-dom";
 
 import {
   About,
-  Contact,
   Experience,
   Hero,
   Navbar,
   Research,
   Tech,
   Works,
-  StarsCanvas,
 } from "./components";
 
 import Footer from "./components/footer";
+
+const Contact = lazy(() =>
+  import("./components/contact").then((module) => ({ default: module.Contact })),
+);
+const StarsCanvas = lazy(() => import("./components/canvas/stars"));
 
 // App
 const App = () => {
@@ -34,8 +38,10 @@ const App = () => {
 
         {/* CONTACT */}
         <div className="relative z-0">
-          <Contact />
-          <StarsCanvas />
+          <Suspense fallback={<div className="min-h-[420px]" />}>
+            <Contact />
+            <StarsCanvas />
+          </Suspense>
         </div>
 
         <Footer />

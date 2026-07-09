@@ -18,6 +18,9 @@ export const Contact = () => {
   });
   const [loading, setLoading] = useState(false);
 
+  const contactEmail =
+    import.meta.env.VITE_APP_EMAILJS_RECIEVER || "doshimanav24@gmail.com";
+
   // handle form change
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
@@ -91,33 +94,57 @@ export const Contact = () => {
     // show loader
     setLoading(true);
 
+    const serviceId = import.meta.env.VITE_APP_SERVICE_ID;
+    const templateId = import.meta.env.VITE_APP_TEMPLATE_ID;
+    const publicKey = import.meta.env.VITE_APP_EMAILJS_KEY;
+    const fromEmail = form.email.trim().toLowerCase();
+
+    if (!contactEmail) {
+      toast.error("Contact email is not configured yet.");
+      setLoading(false);
+      return false;
+    }
+
+    if (!serviceId || !templateId || !publicKey) {
+      const subject = encodeURIComponent(`Portfolio contact from ${form.name}`);
+      const body = encodeURIComponent(
+        `Name: ${form.name}\nEmail: ${fromEmail}\n\n${form.message}`,
+      );
+      window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+      toast.info("Opening your email app to send this message.");
+      setLoading(false);
+      return true;
+    }
+
     // send email
     emailjs
       .send(
-        import.meta.env.VITE_APP_SERVICE_ID,
-        import.meta.env.VITE_APP_TEMPLATE_ID,
+        serviceId,
+        templateId,
         {
           from_name: form.name,
           to_name: "Manav",
-          from_email: form.email.trim().toLowerCase(),
-          to_email: import.meta.env.VITE_APP_EMAILJS_RECIEVER,
+          from_email: fromEmail,
+          to_email: contactEmail,
           message: form.message,
         },
-        import.meta.env.VITE_APP_EMAILJS_KEY,
+        publicKey,
       )
-      .then(() => toast.success("Thanks for contacting me."))
-      .catch((error) => {
-        // Error handle
-        console.log("[CONTACT_ERROR]: ", error);
-        toast.error("Something went wrong.");
-      })
-      .finally(() => {
-        setLoading(false);
+      .then(() => {
+        toast.success("Thanks for contacting me.");
         setForm({
           name: "",
           email: "",
           message: "",
         });
+      })
+      .catch((error) => {
+        // Error handle
+        console.log("[CONTACT_ERROR]: ", error);
+        toast.error("Something went wrong. Please email me directly.");
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 

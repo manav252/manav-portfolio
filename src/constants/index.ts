@@ -188,13 +188,13 @@ export const PROJECTS = [
       },
     ],
     image: safeVisionAi,
-    source_code_link: "https://github.com/manav252",
+    source_code_link: "https://github.com/manav252?tab=repositories",
     demo_video_link: "/demos/safevision-ai-demo.mp4",
   },
   {
     name: "Customer Behavior Analysis",
     description:
-      "Analyzed customer activity, purchase patterns, retention, and segmentation to understand what drives engagement and repeat behavior.",
+      "Problem: understand why customers engage, repeat, or drop off. Tools: SQL, Python, Pandas, and segmentation analysis. Outcome: identified behavior patterns that support retention, targeting, and business decision-making.",
     tags: [
       {
         name: "python",
@@ -210,12 +210,13 @@ export const PROJECTS = [
       },
     ],
     image: customerBehaviorAnalysis,
-    source_code_link: "https://github.com/manav252",
+    source_code_link: "https://github.com/manav252?tab=repositories",
+    live_site_link: "/demos/customer-behavior-analysis.html",
   },
   {
     name: "Healthcare Data Analysis",
     description:
-      "Explored healthcare metrics such as patient flow, appointments, outcomes, and department performance using clean visual dashboards.",
+      "Problem: turn raw healthcare activity into usable operational insight. Tools: Excel, Power BI, and KPI dashboards. Outcome: visualized appointment flow, department performance, and care-delivery trends for faster decisions.",
     tags: [
       {
         name: "power bi",
@@ -231,12 +232,13 @@ export const PROJECTS = [
       },
     ],
     image: healthcareDataAnalysis,
-    source_code_link: "https://github.com/manav252",
+    source_code_link: "https://github.com/manav252?tab=repositories",
+    live_site_link: "/demos/healthcare-data-analysis.html",
   },
   {
     name: "YouTube Trend Analyzer",
     description:
-      "Studied video performance trends, category growth, engagement patterns, and watch-time signals to identify what content gains traction.",
+      "Problem: identify what makes videos trend across categories. Tools: Python, Pandas, Matplotlib, and engagement metrics. Outcome: surfaced patterns in views, likes, timing, and categories to guide content strategy.",
     tags: [
       {
         name: "python",
@@ -252,7 +254,8 @@ export const PROJECTS = [
       },
     ],
     image: youtubeTrendAnalyzer,
-    source_code_link: "https://github.com/manav252",
+    source_code_link: "https://github.com/manav252?tab=repositories",
+    live_site_link: "/demos/youtube-trend-analyzer.html",
   },
 ] as const;
 

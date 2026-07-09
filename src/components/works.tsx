@@ -39,6 +39,8 @@ const ProjectCard = ({
         <img
           src={image}
           alt={name}
+          loading="lazy"
+          decoding="async"
           className="w-full h-full object-cover rounded-2xl"
         />
 
@@ -82,9 +84,9 @@ const ProjectCard = ({
       </div>
 
       {/* Work Info */}
-      <div className="mt-5">
-        <h3 className="text-white font-bold text-[24px]">{name}</h3>
-        <p className="mt-2 min-h-[144px] text-secondary text-[14px] leading-[24px]">
+      <div className="mt-5 flex-1">
+        <h3 className="text-white font-bold text-[24px] leading-[32px]">{name}</h3>
+        <p className="mt-2 text-secondary text-[14px] leading-[24px]">
           {description}
         </p>
       </div>
@@ -98,16 +100,29 @@ const ProjectCard = ({
         ))}
       </div>
 
-      {demo_video_link && (
-        <button
-          type="button"
-          onClick={() => window.open(demo_video_link, "_blank", "noreferrer")}
-          className="mt-auto w-fit rounded-lg border border-[#f8d47a]/40 bg-gradient-to-r from-[#f8d47a]/20 via-[#915eff]/20 to-[#56ccf2]/10 px-4 py-2 text-[13px] font-semibold text-[#f8d47a] transition hover:border-[#f8d47a]/80 hover:bg-[#f8d47a]/20"
-          aria-label={`Open ${name} demo video`}
-        >
-          Demo Video
-        </button>
-      )}
+      <div className="mt-auto flex flex-wrap gap-3 pt-6">
+        {live_site_link && (
+          <button
+            type="button"
+            onClick={() => window.open(live_site_link, "_blank", "noreferrer")}
+            className="w-fit rounded-lg border border-[#915eff]/60 bg-[#915eff]/20 px-4 py-2 text-[13px] font-semibold text-white transition hover:border-[#915eff] hover:bg-[#915eff]/35"
+            aria-label={`Open ${name} project demo`}
+          >
+            Project Demo
+          </button>
+        )}
+
+        {demo_video_link && (
+          <button
+            type="button"
+            onClick={() => window.open(demo_video_link, "_blank", "noreferrer")}
+            className="w-fit rounded-lg border border-[#f8d47a]/40 bg-gradient-to-r from-[#f8d47a]/20 via-[#915eff]/20 to-[#56ccf2]/10 px-4 py-2 text-[13px] font-semibold text-[#f8d47a] transition hover:border-[#f8d47a]/80 hover:bg-[#f8d47a]/20"
+            aria-label={`Open ${name} demo video`}
+          >
+            Demo Video
+          </button>
+        )}
+      </div>
     </Tilt>
   </motion.div>
 );
