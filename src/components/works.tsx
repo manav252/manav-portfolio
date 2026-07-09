@@ -11,6 +11,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 type ProjectCardProps = (typeof PROJECTS)[number] & {
   index: number;
   live_site_link?: string;
+  live_site_label?: string;
   demo_video_link?: string;
 };
 
@@ -23,6 +24,7 @@ const ProjectCard = ({
   image,
   source_code_link,
   live_site_link,
+  live_site_label = "Project Demo",
   demo_video_link,
 }: ProjectCardProps) => (
   <motion.div variants={fadeIn("up", "spring", index * 0.5, 0.75)}>
@@ -106,9 +108,9 @@ const ProjectCard = ({
             type="button"
             onClick={() => window.open(live_site_link, "_blank", "noreferrer")}
             className="w-fit rounded-lg border border-[#915eff]/60 bg-[#915eff]/20 px-4 py-2 text-[13px] font-semibold text-white transition hover:border-[#915eff] hover:bg-[#915eff]/35"
-            aria-label={`Open ${name} project demo`}
+            aria-label={`Open ${name} ${live_site_label}`}
           >
-            Project Demo
+            {live_site_label}
           </button>
         )}
 

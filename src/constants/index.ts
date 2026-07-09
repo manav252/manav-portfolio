@@ -210,8 +210,10 @@ export const PROJECTS = [
       },
     ],
     image: customerBehaviorAnalysis,
-    source_code_link: "https://github.com/manav252?tab=repositories",
-    live_site_link: "/demos/customer-behavior-analysis.html",
+    source_code_link: "https://github.com/manav252/customer_behaviour_analysis",
+    live_site_link:
+      "https://github.com/manav252/customer_behaviour_analysis/blob/main/reports/customer_behavior_dashboard.pbix",
+    live_site_label: "Power BI File",
   },
   {
     name: "Healthcare Data Analysis",
@@ -232,8 +234,9 @@ export const PROJECTS = [
       },
     ],
     image: healthcareDataAnalysis,
-    source_code_link: "https://github.com/manav252?tab=repositories",
+    source_code_link: "https://github.com/manav252/healthcare-diabetes-analysis",
     live_site_link: "https://healthcare-diabetes-analysis-manav252.streamlit.app",
+    live_site_label: "Streamlit App",
   },
   {
     name: "YouTube Trend Analyzer",
@@ -254,8 +257,9 @@ export const PROJECTS = [
       },
     ],
     image: youtubeTrendAnalyzer,
-    source_code_link: "https://github.com/manav252?tab=repositories",
-    live_site_link: "https://youtube-trend-analyzer-manav252.streamlit.app",
+    source_code_link: "https://github.com/manav252/YouTube-Trend-Analyzer",
+    live_site_link: "/demos/youtube-trend-analyzer.html",
+    live_site_label: "Project Demo",
   },
 ] as const;
 
