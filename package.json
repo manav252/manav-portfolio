@@ -1,68 +1,33 @@
 {
-  "name": "manav-portfolio",
-  "version": "1.1.4",
+  "name": "my-portfolio",
   "private": true,
-  "author": {
-    "name": "Manav Doshi",
-    "url": "https://github.com/manav252"
-  },
-  "description": "Personal data analytics, machine learning, and AI portfolio for Manav Doshi.",
-  "keywords": [
-    "portfolio",
-    "data-analytics",
-    "data-science",
-    "machine-learning",
-    "business-intelligence",
-    "ai",
-    "react",
-    "typescript",
-    "vite",
-    "three-js",
-    "tailwindcss"
-  ],
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/manav252/manav-portfolio.git"
-  },
-  "homepage": "https://manav-portfolio-woad.vercel.app",
-  "bugs": {
-    "url": "https://github.com/manav252/manav-portfolio/issues"
-  },
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
-    "check-types": "tsc --noEmit"
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.4.1",
-    "@react-three/drei": "^10.7.7",
-    "@react-three/fiber": "^9.5.0",
-    "clsx": "^2.1.1",
     "framer-motion": "^12.34.0",
-    "maath": "^0.10.8",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-router-dom": "^7.13.0",
-    "react-tilt": "^1.0.2",
-    "react-vertical-timeline-component": "^4.0.0",
-    "sonner": "^2.0.7",
-    "tailwind-merge": "^3.4.1",
-    "three": "^0.182.0",
-    "three-stdlib": "^2.36.1"
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "react-intersection-observer": "^10.0.2"
   },
   "devDependencies": {
-    "@types/react": "^19.2.14",
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
-    "@types/react-vertical-timeline-component": "^3.3.6",
-    "@types/tailwindcss": "^3.1.0",
-    "@vitejs/plugin-react": "^5.1.4",
+    "@vitejs/plugin-react": "^5.1.1",
     "autoprefixer": "^10.4.24",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.4.17",
-    "typescript": "^5.9.3",
+    "tailwindcss": "^4.1.18",
     "vite": "^7.3.1"
   }
 }

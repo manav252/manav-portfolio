@@ -1,51 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <!-- UTF-8 -->
     <meta charset="UTF-8" />
-
-    <!-- Browser Compatibility -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-
-    <!-- Responsive View -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Theme Color -->
-    <meta name="theme-color" content="#050816" />
-
-    <!-- SEO Description -->
+    <title>Manav Doshi · Deep learning for vision and sequences</title>
     <meta
       name="description"
-      content="Manav Doshi's portfolio showcasing data analytics projects, research work, and skills in Excel, SQL, Python, Power BI, and statistics."
+      content="Manav Doshi is a B.Tech E&TC student in Mumbai researching deep learning for computer vision and temporal sequence data: medical image segmentation, emotion recognition and explainable anomaly detection."
     />
-
-    <!-- SEO Keywords -->
+    <meta property="og:title" content="Manav Doshi · Deep learning for vision and sequences" />
     <meta
-      name="keywords"
-      content="Manav Doshi, data analyst portfolio, excel, sql, python, power bi, statistics, data analytics internship"
+      property="og:description"
+      content="Research and projects in medical image segmentation, facial emotion recognition and explainable anomaly detection."
     />
-
-    <!-- Author -->
-    <meta name="author" content="Manav Doshi" />
-    <link rel="author" href="https://github.com/manav252" />
-
-    <!-- ✅ FAVICON (MD LOGO) -->
-    <!-- Make sure md-logo.png is inside /public -->
-    <link rel="icon" type="image/png" href="/md-logo.png" />
-    <link rel="apple-touch-icon" href="/md-logo.png" />
-
-    <!-- Color Scheme -->
-    <meta name="color-scheme" content="dark" />
-
-    <!-- Title -->
-    <title>Manav Doshi | Data Analyst</title>
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      // Apply the saved theme before first paint to avoid a flash.
+      try {
+        var t = localStorage.getItem('theme')
+        if (t !== 'light' && t !== 'dark') {
+          t = window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark'
+        }
+        document.documentElement.dataset.theme = t
+      } catch (e) {}
+    </script>
   </head>
-
   <body>
-    <noscript>You need to enable JavaScript to run this application.</noscript>
     <div id="root"></div>
-
-    <!-- React Entry -->
-    <script type="module" src="/src/main.tsx"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
