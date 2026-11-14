@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { motion, MotionConfig, useScroll, useSpring } from 'framer-motion'
-import { FiArrowUpRight, FiGithub, FiLinkedin, FiMail, FiMoon, FiSun } from 'react-icons/fi'
+import { FiArrowUpRight, FiDownload, FiGithub, FiLinkedin, FiMail, FiMoon, FiSun } from 'react-icons/fi'
 import { education, experience, leadership, profile, projects, research, skills, stats } from './data.js'
 
 const sections = [
@@ -222,6 +222,9 @@ export default function App() {
             <a className="btn" href={`mailto:${profile.email}`}>
               <FiMail /> Get in touch
             </a>
+            <a className="btn" href={profile.cv} download>
+              <FiDownload /> Download CV
+            </a>
             <a className="icon-btn" href={profile.github} target="_blank" rel="noreferrer" aria-label="GitHub">
               <FiGithub />
             </a>
@@ -346,6 +349,9 @@ export default function App() {
               {profile.email} <FiArrowUpRight />
             </a>
             <div className="contact-links">
+              <a href={profile.cv} download>
+                <FiDownload /> Download CV
+              </a>
               <a href={profile.github} target="_blank" rel="noreferrer">
                 <FiGithub /> github.com/manav252
               </a>

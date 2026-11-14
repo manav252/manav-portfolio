@@ -7,6 +7,7 @@ export const profile = {
   email: 'doshimanav24@gmail.com',
   github: 'https://github.com/manav252',
   linkedin: 'https://linkedin.com/in/manav-doshi-252md',
+  cv: '/Manav_Doshi_CV.pdf',
   status: 'Open to research internships: human motion analysis & medical AI',
   summary: [
     'I am a B.Tech Electronics & Telecommunication student at DJ Sanghvi College of Engineering (graduating June 2027), working on deep learning for computer vision and temporal sequence data.',
